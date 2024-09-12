@@ -22,15 +22,33 @@
         </div>
     </header>
 
-    <!-- Molecular Viewer Section -->
-    <section class="molecular-viewer-section">
-        <div class="viewer-container">
+
             <h2>About Us</h2>
             <p>We provide cutting edge Molecular Modelling Software applicable to Physics based Molecular Simulations, Protein and Peptide Modelling, Molecular docking and Drug Discovery. Our in-house devoloped Molecular Modelling tools provide a 
-                modern interface to your needs for Research. Our tools are hybrid in nature, and we provide customizable interfaces as well. Feel free to write to us at nautilis@modellinq.science.
-                Below is the structure of the Aβ42 peptide, a key peptide in Alzheimer's disease research.</p>
+                modern interface to your needs for Research. Our tools are hybrid in nature, and we provide customizable interfaces as well. Feel free to write to us at nautilis@modellinq.science.</p>
+            <h4> Below is a Molecular PDB viewer </h4>
+             <!-- PDB Viewer Section -->
+    <section class="molecular-viewer-section">
+        <div class="viewer-container">
+            <h2>Interactive PDB Viewer</h2>
+            <p>Upload a PDB file and use the Next/Previous buttons to navigate through models.</p>
+
+            <!-- File Upload for PDB -->
+            <div class="pdb-file-upload">
+                <label for="pdbFileInput">Upload PDB File:</label>
+                <input type="file" id="pdbFileInput" accept=".pdb" />
+            </div>
+
+            <!-- Molecular Viewer -->
             <div id="molecule-viewer"></div>
-        </div>
+
+            <!-- Next and Previous Buttons -->
+            <div class="pdb-navigation">
+                <button id="prevPdbBtn">Previous</button>
+                <button id="nextPdbBtn">Next</button>
+            </div>
+        </div>   
+        
     </section>
 
     <!-- Services Section -->
