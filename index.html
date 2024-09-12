@@ -28,15 +28,26 @@
                 modern interface to your needs for Research. Our tools are hybrid in nature, and we provide customizable interfaces as well. Feel free to write to us at nautilis@modellinq.science.</p>
             <h4> Below is a Molecular PDB viewer </h4>
              <!-- PDB Viewer Section -->
+  <!-- PDB Viewer Section -->
     <section class="molecular-viewer-section">
         <div class="viewer-container">
             <h2>Interactive PDB Viewer</h2>
-            <p>Upload a PDB file and use the Next/Previous buttons to navigate through models.</p>
+            <p>Upload a PDB file and use the Next/Previous buttons to navigate through models and select a viewing style.</p>
 
             <!-- File Upload for PDB -->
             <div class="pdb-file-upload">
                 <label for="pdbFileInput">Upload PDB File:</label>
                 <input type="file" id="pdbFileInput" accept=".pdb" />
+            </div>
+
+            <!-- Viewing Options -->
+            <div class="viewing-options">
+                <label for="viewStyle">Select Viewing Style:</label>
+                <select id="viewStyle">
+                    <option value="cartoon">Cartoon</option>
+                    <option value="ribbon">Ribbon</option>
+                    <option value="ballStick">Ball and Stick</option>
+                </select>
             </div>
 
             <!-- Molecular Viewer -->
@@ -47,9 +58,9 @@
                 <button id="prevPdbBtn">Previous</button>
                 <button id="nextPdbBtn">Next</button>
             </div>
-        </div>   
-        
+        </div>
     </section>
+
 
     <!-- Services Section -->
     <section class="services">
