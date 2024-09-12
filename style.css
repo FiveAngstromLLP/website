@@ -12,6 +12,14 @@ html, body {
     padding:0 2rem;
 }
 
+
+h4 {
+    height:100%
+    margin: 2;
+    align-items:center;
+    padding:0 2rem;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
