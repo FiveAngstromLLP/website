@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Five Angstrom LLP.</title>
+    <title>Molecular Modeling Co.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,45 +11,42 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <h1 class="logo">Five Angstrom LLP</h1>
+            <h1 class="logo">Molecular Modeling Co.</h1>
             <nav class="nav">
                 <a href="#services">Services</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
+                <a href="molecular-simulations.html">Molecular Simulations</a>
+                <a href="protein-modeling.html">Protein Modeling</a>
+                <a href="drug-discovery.html">Drug Discovery</a>
+                <a href="modelling-tools.html">Modeling Tools</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Revolutionizing Drug Discovery with Molecular Modeling</h1>
-            <p>From molecular dynamics simulations to drug discovery, we provide solutions to accelerate your research.</p>
-            <a href="#services" class="cta-btn">Explore Our Services</a>
+    <!-- Molecular Viewer Section -->
+    <section class="molecular-viewer-section">
+        <div class="viewer-container">
+            <h2>Aβ42 Peptide Structure</h2>
+            <p>Below is the structure of the Aβ42 peptide, a key peptide in Alzheimer's disease research.</p>
+            <div id="molecule-viewer"></div>
         </div>
-
-        <!-- 3D Molecular Model -->
-        <div id="molecule-3d"></div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3><a href="molecular-simulations.html">Molecular Simulations</a></h3>
-                    <p>We provide cutting-edge simulations to predict molecular behavior at the atomic level.</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="protein-modeling.html">Protein Modeling</a></h3>
-                    <p>Advanced protein structure predictions and analysis to support your research.</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="drug-discovery.html">Drug Discovery</a></h3>
-                    <p>Virtual screening and drug design services to accelerate the drug discovery process.</p>
-                </div>
-            </div>
+    <section class="services">
+        <div class="service-box">
+            <h3>Molecular Simulations</h3>
+            <p>We provide cutting-edge simulations to predict molecular behavior at the atomic level.</p>
+            <a href="molecular-simulations.html" class="btn">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Protein Modeling</h3>
+            <p>Advanced protein structure predictions and analysis to support your research.</p>
+            <a href="protein-modeling.html" class="btn">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Drug Discovery</h3>
+            <p>Virtual screening and drug design services to accelerate the drug discovery process.</p>
+            <a href="drug-discovery.html" class="btn">Learn More</a>
         </div>
     </section>
 
@@ -60,7 +57,9 @@
         </div>
     </footer>
 
+    <!-- JS Scripts -->
     <script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+

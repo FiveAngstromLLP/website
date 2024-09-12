@@ -5,11 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -17,120 +23,102 @@ body {
     background: #0d47a1;
     color: white;
     padding: 1rem 0;
+    width: 100%;
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem; /* Added padding to prevent content touching the edges */
     align-items: center;
-    flex-wrap: nowrap; /* Ensure the navbar stays in a single row */
 }
 
 .header .logo {
     font-size: 1.8rem;
-    white-space: nowrap; /* Prevent logo from wrapping */
-}
-
-.header .nav {
-    display: flex;
-    gap: 1rem; /* Add spacing between nav items */
 }
 
 .header .nav a {
     color: white;
     text-decoration: none;
-    margin-left: 0.5rem;
-    font-size: 1rem; /* Slightly smaller font size to fit in a single row */
-    padding: 0.5rem 0.8rem; /* Reduced padding to ensure space for all items */
+    margin-left: 1.5rem;
 }
 
-.header .nav a:hover {
-    background-color: #ffffff33; /* Light background on hover */
-    border-radius: 5px;          /* Add subtle rounded corners */
-}
-
-/* Hero Section */
-.hero {
-    min-height: 80vh;
-    background: linear-gradient(to right, #0d47a1, #42a5f5);
-    color: white;
+/* Centering Content */
+.molecular-viewer-section, .content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    position: relative;
+    flex-direction: column;
+    height: 80vh;
     padding: 2rem;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    padding: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
-
-/* CTA Button with Animation */
-.hero .cta-btn {
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    background-color: #fff;
-    color: #0d47a1;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero .cta-btn:hover {
-    background-color: #0d47a1;
-    color: #fff;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    text-align: center;
 }
 
 /* Molecular Viewer */
-#molecule-3d {
+.viewer-container {
+    max-width: 800px;
     width: 100%;
-    max-width: 500px;
-    height: 400px;
-    margin: 2rem auto;
-}
-
-/* Services Section */
-#services {
-    padding: 2rem;
-    background-color: white;
-}
-
-.service-list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#molecule-viewer {
+    width: 600px;
+    height: 400px;
+    background-color: #eaeaea;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+/* Services Section with Box Design */
+.services {
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 4rem 2rem;
 }
 
-.service-item {
-    background: white;
-    padding: 1.5rem;
+.service-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
-    margin: 1rem 0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.service-item h3 {
-    margin-bottom: 1rem;
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-#services h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.service-box h3 {
+    margin-bottom: 1.5rem;
+    color: #0d47a1;
+}
+
+.service-box p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.service-box .btn {
+    background-color: #0d47a1;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.service-box .btn:hover {
+    background-color: #004aad;
 }
 
 /* Footer */
@@ -139,48 +127,81 @@ footer {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    width: 100%;
+    margin-top: auto;
 }
 
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    #molecule-3d {
+    #molecule-viewer {
+        width: 100%;
         height: 300px;
     }
 
-    .service-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 100%;
+    .service-box {
+        width: 45%;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    #molecule-3d {
+    #molecule-viewer {
         height: 250px;
     }
 
-    .hero .cta-btn {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+    .service-box {
+        width: 100%;
     }
 }
+/* Specific Section for Modelling Tools Centering */
+.modelling-tools-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    padding: 2rem;
+    text-align: center;
+}
+
+.modelling-tools-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.modelling-tools-container h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.modelling-tools-container p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #0d47a1;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modelling-tools-container h2 {
+        font-size: 2rem;
+    }
+
+    .modelling-tools-container p {
+        font-size: 1rem;
+    }
+}
+
