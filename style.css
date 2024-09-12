@@ -33,20 +33,52 @@ body {
 .header .container {
     display: flex;
     justify-content: space-between;
-    /*padding: 0 2rem; /* Added padding to prevent content touching the edges */
+    padding: 0 1rem; /* Added padding to prevent content touching the edges */
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .header .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    white-space: nowrap;
 }
-
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 .header .nav a {
     color: white;
     text-decoration: none;
-    margin-left: 1.5rem;
+    margin-left: 1.0rem;
 }
 
+/* About Us Section */
+.about-us {
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.about-us h2 {
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+/* PDB Viewer Section */
+.molecular-viewer-section {
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.molecular-viewer-section h2 {
+    margin-top: 3rem;
+}
+.molecular-viewer-section p {
+    margin-top: 1rem;
+    color: #555;
+}
 /* Centering Content */
 .molecular-viewer-section, .content {
     display: flex;
@@ -76,6 +108,9 @@ body {
     position: relative;
 }
 
+.pdb-navigation {
+    margin-top: 2rem; /* Add margin to separate navigation buttons from other content */
+}
 /* Services Section with Box Design */
 .services {
     display: flex;
@@ -83,6 +118,7 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 4rem 2rem;
+    margin-top: 2rem;
 }
 
 .service-box {
@@ -123,6 +159,27 @@ body {
 
 .service-box .btn:hover {
     background-color: #004aad;
+}
+/* Features Section */
+.features {
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.features .feature {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.features .feature h3 {
+    margin-bottom: 0.5rem;
+}
+
+.features .feature p {
+    margin: 0;
 }
 
 /* Footer */
