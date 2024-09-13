@@ -73,8 +73,23 @@ body {
     margin-bottom: 1rem;
     color: #555;
 }
+
+.about-us {
+    margin-top: 50px; /* Adjust the value as needed */
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
 /* PDB Viewer Section */
 .molecular-viewer-section {
+    padding-top: 50px; /* Adjust the value as needed */
     padding: 2rem 1rem;
     width: 100%;
 }
