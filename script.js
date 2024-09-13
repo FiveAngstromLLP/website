@@ -6,6 +6,8 @@ window.onload = function () {
     let pdbData = ''; // To hold the entire PDB file contents
     let models = [];  // Array to hold each MODEL section
     let currentModelIndex = 0; // Track the current MODEL index
+
+    let rotationInterval;
 // Function to start rotating the DNA structure
     function startRotation() {
         rotationInterval = setInterval(() => {
