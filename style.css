@@ -62,7 +62,7 @@ body {
 /* About Us Section */
 .about-us {
     padding: 2rem 1rem;
-    margin-top: 50px; /* Adjust the value as needed *
+    margin-top: 50px; 
     width: 100%;
 }
 
@@ -76,12 +76,6 @@ body {
     color: #555;
 }
 
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
 
 
