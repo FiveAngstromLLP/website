@@ -122,6 +122,7 @@ body {
 
 .pdb-navigation {
     margin-top: 2rem; /* Add margin to separate navigation buttons from other content */
+    flex-wrap: wrap; /* Allow buttons to wrap */
 }
 /* Services Section with Box Design */
 .services {
