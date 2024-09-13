@@ -87,10 +87,11 @@ body {
 .molecular-viewer-section h2 {
     margin-top: 50px;
 }
-.molecular-viewer-section p {
-    margin-top: 1rem;
-    color: #555;
+.molecular-viewer-section p{
+     margin-top:1rem;
+     color: #555;
 }
+
 /* Centering Content */
 .molecular-viewer-section, .content {
     display: flex;
@@ -110,6 +111,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    box-sizing: border
 }
 
 #molecule-viewer {
