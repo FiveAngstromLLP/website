@@ -21,37 +21,43 @@ body {
     flex-direction: column;
     align-items:center;
 }
-
 /* Header */
 .header {
     background: #0d47a1;
     color: white;
-    padding: 0;
+    padding: 1rem; /* Increased padding */
     width: 100%;
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem; /* Added padding to prevent content touching the edges */
+    padding: 0 1rem;
     align-items: center;
     flex-wrap: nowrap;
+    flex-direction: column; /* Adjusted for better text wrapping */
+    text-align: center; /* Centered text */
 }
 
 .header .logo {
     font-size: 1.5rem;
     white-space: nowrap;
 }
+
 .header .nav {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap; /* Allow wrapping of navigation items */
+    justify-content: center; /* Center navigation items */
 }
+
 .header .nav a {
     color: white;
     text-decoration: none;
     margin-left: 1.0rem;
 }
+
 
 /* About Us Section */
 .about-us {
