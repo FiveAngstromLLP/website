@@ -355,7 +355,7 @@ footer {
 /* For Mobile optimization */
 @media (max-width: 768px) {
     .header .container {
-        flex-direction: column;
+        flex-direction: rows;
         align-items: center;
     }
 
