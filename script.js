@@ -6,7 +6,37 @@ window.onload = function () {
     let pdbData = ''; // To hold the entire PDB file contents
     let models = [];  // Array to hold each MODEL section
     let currentModelIndex = 0; // Track the current MODEL index
+// Function to start rotating the DNA structure
+    function startRotation() {
+        rotationInterval = setInterval(() => {
+            viewer.rotate(1);
+            viewer.render();
+        }, 100);
+    }
 
+    // Function to stop rotating the DNA structure
+    function stopRotation() {
+        clearInterval(rotationInterval);
+    }
+
+    // Load the initial DNA structure using a PDB code
+    let pdbCode = '1BNA'; // Example PDB code for DNA structure
+    $3Dmol.download(`pdb:${pdbCode}`, viewer, {}, function() {
+        viewer.setStyle({}, { cartoon: { color: 'spectrum' } });
+        viewer.zoomTo();
+        viewer.render();
+        startRotation();
+    });
+
+    // Handle PDB file upload
+    document.getElementById('pdbFileInput').addEventListener('change', function(event) {
+        let file = event.target.files[0];
+        if (file && file.name.endsWith('.pdb')) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                stopRotation(); // Stop the DNA rotation
+                pdbData = e.target.result;
+                
     // Function to extract MODELs from PDB data
     function extractModels(pdb) {
         models = []; // Clear models array
